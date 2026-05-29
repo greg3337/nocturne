@@ -89,7 +89,7 @@ export default function Reviews() {
                 className="font-cormorant text-[5rem] text-gold/12 leading-none mb-3 select-none group-hover:text-gold/20 transition-colors duration-300"
                 aria-hidden
               >
-                "
+                &ldquo;
               </div>
 
               <Stars count={r.rating} />

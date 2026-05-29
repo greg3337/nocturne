@@ -43,7 +43,7 @@ export default function Ambiance() {
           className="text-center mb-24"
         >
           <p className="font-raleway text-[10px] tracking-[0.48em] uppercase text-gold/58 mb-4">
-            L'Expérience
+            L&apos;Expérience
           </p>
           <h2 className="font-cormorant font-light text-[clamp(3.5rem,7vw,5.5rem)] text-cream tracking-[0.12em] mb-6">
             Ambiance
@@ -100,7 +100,7 @@ export default function Ambiance() {
           className="mt-24 text-center"
         >
           <p className="font-cormorant italic text-[1.6rem] md:text-[1.9rem] text-cream/35 leading-relaxed max-w-2xl mx-auto">
-            "La gastronomie est l'art de se nourrir du beau autant que du bon."
+            &ldquo;La gastronomie est l&apos;art de se nourrir du beau autant que du bon.&rdquo;
           </p>
           <footer className="mt-5 font-raleway text-[9px] tracking-[0.35em] uppercase text-gold/38">
             — Jean-Michel Cartier, Chef Exécutif

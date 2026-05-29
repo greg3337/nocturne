@@ -103,7 +103,7 @@ export default function Hero() {
           variants={fadeUp}
           className="font-cormorant italic text-xl md:text-2xl text-cream/50 mb-16 tracking-wide"
         >
-          L'obscurité révèle ce que la lumière dissimule
+          L&apos;obscurité révèle ce que la lumière dissimule
         </motion.p>
 
         {/* Reservation widget */}
