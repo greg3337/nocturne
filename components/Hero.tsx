@@ -114,15 +114,16 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-stretch max-w-lg mx-auto border border-gold/22 overflow-hidden"
         >
           <input
-            type="date"
+            type="text"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 [color-scheme:dark] backdrop-blur-sm"
+            placeholder="JJ/MM/AAAA"
+            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 backdrop-blur-sm"
           />
           <select
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
-            className="bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 [color-scheme:dark] cursor-pointer"
+            className="bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 cursor-pointer"
           >
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <option key={n} value={n} className="bg-charcoal text-cream">
