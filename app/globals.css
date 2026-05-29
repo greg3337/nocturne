@@ -44,3 +44,24 @@ body::after {
 ::-webkit-scrollbar-track { background: #111114; }
 ::-webkit-scrollbar-thumb { background: #A08030; }
 ::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+
+/* Force date-input text visibility on WebKit/mobile (color-scheme:dark overrides Tailwind color) */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-hour-field,
+input[type="date"]::-webkit-datetime-edit-minute-field {
+  color: #F5E6C8;
+  -webkit-text-fill-color: #F5E6C8;
+}
+
+/* Placeholder visibility on dark backgrounds */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(245, 230, 200, 0.45);
+  -webkit-text-fill-color: rgba(245, 230, 200, 0.45);
+  opacity: 1;
+}

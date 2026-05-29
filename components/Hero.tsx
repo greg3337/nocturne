@@ -118,12 +118,12 @@ export default function Hero() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream/70 outline-none border-b sm:border-b-0 sm:border-r border-gold/18 placeholder:text-cream/25 [color-scheme:dark] backdrop-blur-sm"
+            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 [color-scheme:dark] backdrop-blur-sm"
           />
           <select
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
-            className="bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream/70 outline-none border-b sm:border-b-0 sm:border-r border-gold/18 [color-scheme:dark] cursor-pointer"
+            className="bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 [color-scheme:dark] cursor-pointer"
           >
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <option key={n} value={n} className="bg-charcoal text-cream">
