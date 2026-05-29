@@ -79,26 +79,26 @@ function DishRow({ dish, index }: { dish: Dish; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.65, delay: index * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
-      className="group relative py-6 border-b border-gold/[0.12] hover:border-gold/28 transition-colors duration-500 cursor-default"
+      className="group py-6 border-b border-gold/[0.12] hover:border-gold/28 transition-colors duration-500 cursor-default"
     >
-      {dish.tag && (
-        <span className="absolute top-6 right-0 font-raleway text-[8px] tracking-[0.32em] uppercase text-gold/55 border border-gold/22 px-2 py-0.5">
-          {dish.tag}
-        </span>
-      )}
-      <div className="flex justify-between items-start gap-6 pr-16">
-        <div>
-          <h4 className="font-cormorant text-[1.2rem] text-cream group-hover:text-gold transition-colors duration-300 mb-1.5 leading-snug">
+      <div className="flex items-start justify-between gap-4 mb-1.5">
+        <div className="flex items-center gap-2 flex-wrap min-w-0">
+          <h4 className="font-cormorant text-[1.2rem] text-cream group-hover:text-gold transition-colors duration-300 leading-snug">
             {dish.name}
           </h4>
-          <p className="font-raleway text-[11px] text-cream/38 leading-relaxed tracking-wide">
-            {dish.description}
-          </p>
+          {dish.tag && (
+            <span className="font-raleway text-[8px] tracking-[0.32em] uppercase text-gold/55 border border-gold/22 px-2 py-0.5 flex-shrink-0">
+              {dish.tag}
+            </span>
+          )}
         </div>
         <span className="font-cormorant text-xl text-gold/75 whitespace-nowrap flex-shrink-0 mt-0.5">
           {dish.price} €
         </span>
       </div>
+      <p className="font-raleway text-[11px] text-cream/38 leading-relaxed tracking-wide">
+        {dish.description}
+      </p>
     </motion.div>
   );
 }
