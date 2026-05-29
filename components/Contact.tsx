@@ -72,16 +72,31 @@ export default function Contact() {
               <p className="font-raleway text-[9px] tracking-[0.32em] uppercase text-cream/28 mb-4">
                 Suivez-nous
               </p>
-              <div className="flex gap-5">
-                {["Instagram", "Facebook"].map((s) => (
-                  <a
-                    key={s}
-                    href="#"
-                    className="font-raleway text-[10px] tracking-[0.22em] uppercase text-cream/38 hover:text-gold transition-colors duration-300"
-                  >
-                    {s}
-                  </a>
-                ))}
+              <div className="flex gap-4">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-cream/35 hover:text-gold transition-colors duration-300"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+                  </svg>
+                </a>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="text-cream/35 hover:text-gold transition-colors duration-300"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </a>
               </div>
             </div>
           </motion.div>

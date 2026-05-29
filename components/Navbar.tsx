@@ -53,12 +53,23 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a
-            href="#contact"
-            className="hidden md:block font-raleway text-[10px] tracking-[0.22em] uppercase px-6 py-2.5 border border-gold/35 text-gold hover:bg-gold hover:text-obsidian transition-all duration-300"
-          >
-            Réserver
-          </a>
+          <div className="hidden md:flex items-center gap-6">
+            <a
+              href="tel:+33140001998"
+              className="flex items-center gap-2 font-raleway text-[10px] tracking-[0.14em] text-gold/50 hover:text-gold transition-colors duration-300"
+            >
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="flex-shrink-0">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              +33 1 40 00 19 98
+            </a>
+            <a
+              href="#contact"
+              className="font-raleway text-[10px] tracking-[0.22em] uppercase px-6 py-2.5 border border-gold/35 text-gold hover:bg-gold hover:text-obsidian transition-all duration-300"
+            >
+              Réserver
+            </a>
+          </div>
 
           <button
             onClick={() => setOpen(!open)}
