@@ -94,7 +94,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="font-cormorant font-light leading-none text-cream mb-6 w-full text-center text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] tracking-[0.05em] sm:tracking-[0.18em] pl-[0.05em] sm:pl-[0.18em]"
+          className="font-cormorant font-light leading-none text-cream mb-6 w-full text-center text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] tracking-[0.05em] sm:tracking-[0.18em]"
         >
           NOCTURNE
         </motion.h1>
