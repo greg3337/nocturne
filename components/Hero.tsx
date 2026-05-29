@@ -1,7 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import flatpickr from "flatpickr";
+import { French } from "flatpickr/dist/l10n/fr.js";
+import "flatpickr/dist/themes/dark.css";
 
 const EASE = [0.25, 0.1, 0.25, 1] as [number, number, number, number];
 
@@ -17,6 +20,22 @@ const fadeUp = {
 export default function Hero() {
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState("2");
+  const dateInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!dateInputRef.current) return;
+    const fp = flatpickr(dateInputRef.current, {
+      locale: French,
+      dateFormat: "d/m/Y",
+      disableMobile: true,
+      minDate: "today",
+      onChange: (_dates: Date[], dateStr: string) => setDate(dateStr),
+    });
+    return () => {
+      if (Array.isArray(fp)) fp.forEach((f) => f.destroy());
+      else fp.destroy();
+    };
+  }, []);
 
   return (
     <section
@@ -114,11 +133,12 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-stretch max-w-lg mx-auto border border-gold/22 overflow-hidden"
         >
           <input
+            ref={dateInputRef}
             type="text"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
             placeholder="JJ/MM/AAAA"
-            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 backdrop-blur-sm"
+            defaultValue={date}
+            readOnly
+            className="flex-1 bg-obsidian/85 px-5 py-4 font-raleway text-xs tracking-wider text-cream outline-none border-b sm:border-b-0 sm:border-r border-gold/18 backdrop-blur-sm cursor-pointer"
           />
           <select
             value={guests}
